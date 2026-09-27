@@ -1,0 +1,509 @@
+{
+  "pays": "Grèce",
+  "drapeau": "🇬🇷",
+  "symbole": "🏛️",
+  "titre": "Odyssée Relaxante en Grèce : Îles et Sources Chaudes",
+  "budget_total": "Environ 3200 €/personne",
+  "duree": "14 jours",
+  "temps_vol": "2h50 depuis Lyon, france",
+  "escale": "0",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Athènes et première immersion",
+      "legende": "Après votre vol depuis Lyon, installez-vous confortablement à Athènes. Profitez d'une première balade douce dans le quartier historique de Plaka, imprégnez-vous de l'ambiance grecque et savourez un dîner traditionnel pour bien commencer votre séjour.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🛬</strong>: Arrivée à l'aéroport international d'Athènes (ATH) et transfert vers votre hôtel.",
+        "<strong>🛏️</strong>: Installation et détente à votre hébergement.",
+        "<strong>🚶‍♂️</strong>: Balade relaxante dans le quartier pittoresque de Plaka, au pied de l'Acropole."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport international d'Athènes, Athènes",
+          "categorie": "Aéroport",
+          "coords": { "lat": 37.9364, "lng": 23.9493 }
+        },
+        {
+          "nom_recherche": "Plaka, Athènes",
+          "categorie": "Quartier historique",
+          "coords": { "lat": 37.9752, "lng": 23.7280 }
+        }
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil transport",
+          "texte": "Le métro est le moyen le plus simple et rapide pour rejoindre le centre-ville depuis l'aéroport."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Découverte de l'Acropole et de l'Agora",
+      "legende": "Plongez au cœur de l'histoire antique en explorant l'Acropole, symbole intemporel d'Athènes. Poursuivez avec une promenade paisible dans l'Agora antique, berceau de la démocratie, avant de vous détendre dans un café typique.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🏛️</strong>: Visite de l'Acropole d'Athènes, incluant le Parthénon et l'Érechthéion.",
+        "<strong>🚶‍♀️</strong>: Promenade dans l'Agora antique, cœur de la vie publique athénienne.",
+        "<strong>☕</strong>: Pause détente dans un café traditionnel à Monastiraki."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Acropole d'Athènes, Athènes",
+          "categorie": "Site archéologique",
+          "coords": { "lat": 37.9715, "lng": 23.7262 }
+        },
+        {
+          "nom_recherche": "Agora antique d'Athènes, Athènes",
+          "categorie": "Site archéologique",
+          "coords": { "lat": 37.9759, "lng": 23.7226 }
+        },
+        {
+          "nom_recherche": "Place Monastiraki, Athènes",
+          "categorie": "Place",
+          "coords": { "lat": 37.9756, "lng": 23.7254 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "L'Acropole est très exposée au soleil. N'oubliez pas chapeau, lunettes et crème solaire."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏺",
+      "titre": "Trésors du musée et vue panoramique",
+      "legende": "Explorez les collections fascinantes du Musée National Archéologique, puis offrez-vous une vue imprenable sur Athènes depuis le Mont Lycabette. Une journée équilibrée entre culture et paysages apaisants.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🏺</strong>: Visite du Musée National Archéologique, l'un des plus grands musées de Grèce.",
+        "<strong>🚠</strong>: Montée en funiculaire au Mont Lycabette pour un panorama exceptionnel sur la ville.",
+        "<strong>🌅</strong>: Dîner avec vue sur l'Acropole illuminée depuis un restaurant de Gazi ou Thissio."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Musée national archéologique d'Athènes, Athènes",
+          "categorie": "Musée",
+          "coords": { "lat": 37.9893, "lng": 23.7327 }
+        },
+        {
+          "nom_recherche": "Mont Lycabette, Athènes",
+          "categorie": "Point de vue",
+          "coords": { "lat": 37.9806, "lng": 23.7436 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Astuce",
+          "texte": "Le funiculaire du Mont Lycabette est une option confortable pour profiter de la vue sans effort."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🚢",
+      "titre": "Voyage vers Santorin et coucher de soleil à Oia",
+      "legende": "Embarquez pour une traversée relaxante vers la mythique île de Santorin. Après votre installation, dirigez-vous vers Oia pour assister à l'un des couchers de soleil les plus célèbres du monde, un moment de pure magie.",
+      "lieu": "Santorin",
+      "activites": [
+        "<strong>🚢</strong>: Transfert au port du Pirée et traversée en ferry vers Santorin (environ 5-8h selon le type de ferry).",
+        "<strong>🛏️</strong>: Installation à votre hôtel à Fira ou Oia.",
+        "<strong>🌅</strong>: Admirer le coucher de soleil emblématique depuis Oia."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Port du Pirée, Le Pirée",
+          "categorie": "Port",
+          "coords": { "lat": 37.9465, "lng": 23.6407 }
+        },
+        {
+          "nom_recherche": "Oia, Santorin",
+          "categorie": "Village",
+          "coords": { "lat": 36.4600, "lng": 25.3750 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Temps de trajet",
+          "texte": "Prévoyez une journée de transition pour le ferry. Les ferries rapides réduisent le temps de traversée."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": " caldera",
+      "titre": "Exploration de Fira et vues sur la Caldeira",
+      "legende": "Découvrez Fira, la capitale animée de Santorin, avec ses ruelles sinueuses et ses vues spectaculaires sur la caldeira. Profitez d'une balade tranquille le long des falaises, ponctuée de pauses pour admirer le paysage volcanique unique.",
+      "lieu": "Santorin",
+      "activites": [
+        "<strong>🚶‍♀️</strong>: Balade dans les ruelles de Fira, la capitale de Santorin.",
+        "<strong>📸</strong>: Admirer les vues imprenables sur la caldeira et la mer Égée.",
+        "<strong>🍽️</strong>: Déguster un déjeuner avec vue dans un restaurant de Fira."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Fira, Santorin",
+          "categorie": "Ville",
+          "coords": { "lat": 36.4167, "lng": 25.4333 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Chaussures confortables",
+          "texte": "Les rues pavées de Fira et Oia nécessitent de bonnes chaussures pour marcher confortablement."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "♨️",
+      "titre": "Croisière volcanique et sources chaudes",
+      "legende": "Embarquez pour une croisière relaxante autour de la caldeira. Vous aurez l'occasion de nager dans les sources chaudes volcaniques de Palea Kameni, une expérience unique et apaisante pour le corps et l'esprit.",
+      "lieu": "Santorin",
+      "activites": [
+        "<strong>⛵</strong>: Croisière en bateau vers le volcan de Nea Kameni et l'île de Palea Kameni.",
+        "<strong>♨️</strong>: Baignade dans les sources chaudes sulfureuses de Palea Kameni.",
+        "<strong>🍷</strong>: Dégustation de vins locaux dans un vignoble de Santorin en fin de journée."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Nea Kameni, Santorin",
+          "categorie": "Volcan",
+          "coords": { "lat": 36.3900, "lng": 25.3900 }
+        },
+        {
+          "nom_recherche": "Palea Kameni, Santorin",
+          "categorie": "Île volcanique",
+          "coords": { "lat": 36.3800, "lng": 25.3800 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Attention aux maillots",
+          "texte": "Les sources chaudes peuvent tacher les maillots de bain clairs en raison du soufre."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🏖️",
+      "titre": "Voyage vers Milos et détente balnéaire",
+      "legende": "Quittez Santorin pour l'île de Milos, réputée pour ses paysages lunaires et ses plages idylliques. Après l'installation, profitez d'une après-midi de pure détente sur l'une des plages calmes de l'île, loin de l'agitation.",
+      "lieu": "Milos",
+      "activites": [
+        "<strong>🚢</strong>: Traversée en ferry de Santorin à Milos (environ 2-3h).",
+        "<strong>🛏️</strong>: Installation à votre hôtel à Adamas ou Pollonia.",
+        "<strong>⛱️</strong>: Après-midi de détente sur la plage de Sarakiniko ou Firopotamos."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Port d'Adamas, Milos",
+          "categorie": "Port",
+          "coords": { "lat": 36.7260, "lng": 24.4440 }
+        },
+        {
+          "nom_recherche": "Sarakiniko, Milos",
+          "categorie": "Plage",
+          "coords": { "lat": 36.7580, "lng": 24.4750 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Location de véhicule",
+          "texte": "La location d'un quad ou d'une petite voiture est recommandée pour explorer Milos à votre rythme."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🗿",
+      "titre": "Paysages lunaires et villages de pêcheurs",
+      "legende": "Explorez les paysages surréalistes de Sarakiniko, puis découvrez les charmants villages de pêcheurs colorés comme Mandrakia et Klima. Une journée dédiée à la beauté naturelle et à l'authenticité de Milos.",
+      "lieu": "Milos",
+      "activites": [
+        "<strong>🚶‍♂️</strong>: Exploration des formations rocheuses uniques de Sarakiniko.",
+        "<strong>🏘️</strong>: Visite des villages de pêcheurs pittoresques de Mandrakia et Klima.",
+        "<strong>🍽️</strong>: Dégustation de fruits de mer frais dans une taverne locale."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Sarakiniko, Milos",
+          "categorie": "Plage",
+          "coords": { "lat": 36.7580, "lng": 24.4750 }
+        },
+        {
+          "nom_recherche": "Mandrakia, Milos",
+          "categorie": "Village",
+          "coords": { "lat": 36.7600, "lng": 24.4800 }
+        },
+        {
+          "nom_recherche": "Klima, Milos",
+          "categorie": "Village",
+          "coords": { "lat": 36.7360, "lng": 24.4250 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Sarakiniko offre des opportunités de photos incroyables, surtout au lever ou au coucher du soleil."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "⛵",
+      "titre": "Croisière à Kleftiko et baignade dans les grottes",
+      "legende": "Embarquez pour une croisière inoubliable vers Kleftiko, l'ancien repaire des pirates, accessible uniquement par la mer. Nagez dans des eaux cristallines et explorez des grottes marines, une expérience rafraîchissante et mémorable.",
+      "lieu": "Milos",
+      "activites": [
+        "<strong>⛵</strong>: Croisière d'une journée autour de Milos, avec arrêt à Kleftiko.",
+        "<strong>🏊‍♀️</strong>: Baignade et snorkeling dans les eaux turquoise de Kleftiko et Sykia.",
+        "<strong>🍽️</strong>: Déjeuner à bord du bateau (souvent inclus dans les excursions)."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Kleftiko, Milos",
+          "categorie": "Site naturel",
+          "coords": { "lat": 36.6600, "lng": 24.3800 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🐠",
+          "titre": "Équipement",
+          "texte": "N'oubliez pas votre masque et tuba pour profiter pleinement des fonds marins de Kleftiko."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "♨️",
+      "titre": "Plages thermales et sources chaudes",
+      "legende": "Profitez d'une journée de pure relaxation sur les plages de Milos, certaines offrant des sources thermales naturelles. Laissez-vous bercer par le soleil et les eaux chaudes, une parenthèse de bien-être avant de retourner sur le continent.",
+      "lieu": "Milos",
+      "activites": [
+        "<strong>♨️</strong>: Détente sur la plage de Paliochori, connue pour ses sources thermales sous-marines.",
+        "<strong>⛱️</strong>: Baignade et farniente sur la plage de Fyriplaka ou Tsigrado.",
+        "<strong>🍦</strong>: Dégustation de glaces artisanales à Plaka, la capitale de Milos."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Paliochori, Milos",
+          "categorie": "Plage",
+          "coords": { "lat": 36.6800, "lng": 24.5000 }
+        },
+        {
+          "nom_recherche": "Fyriplaka, Milos",
+          "categorie": "Plage",
+          "coords": { "lat": 36.6700, "lng": 24.4500 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Cuisine locale",
+          "texte": "Les tavernes de Paliochori proposent des plats cuits dans le sable chaud grâce à l'activité volcanique."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🚢",
+      "titre": "Retour à Athènes et soirée tranquille",
+      "legende": "Après ces jours idylliques sur les îles, reprenez le ferry pour Athènes. Profitez de la soirée pour vous reposer, dîner tranquillement dans un quartier que vous avez apprécié ou découvrir un nouveau coin de la capitale.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🚢</strong>: Traversée en ferry de Milos à Athènes (environ 3-5h).",
+        "<strong>🛏️</strong>: Installation à votre hôtel à Athènes.",
+        "<strong>🍽️</strong>: Dîner relaxant dans le quartier de Psiri, connu pour ses tavernes et son ambiance."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Port du Pirée, Le Pirée",
+          "categorie": "Port",
+          "coords": { "lat": 37.9465, "lng": 23.6407 }
+        },
+        {
+          "nom_recherche": "Psiri, Athènes",
+          "categorie": "Quartier",
+          "coords": { "lat": 37.9770, "lng": 23.7230 }
+        }
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "📚",
+          "titre": "Lecture",
+          "texte": "Le trajet en ferry est idéal pour lire un bon livre ou simplement admirer le paysage marin."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🧖‍♀️",
+      "titre": "Journée bien-être à Loutraki",
+      "legende": "Évadez-vous pour une journée de pur bien-être à Loutraki, une ville thermale réputée. Profitez des eaux curatives de ses spas et de ses plages, une manière parfaite de se ressourcer avant la fin du voyage.",
+      "lieu": "Loutraki",
+      "activites": [
+        "<strong>🚗</strong>: Excursion d'une journée à Loutraki (environ 1h de route depuis Athènes).",
+        "<strong>🧖‍♀️</strong>: Détente au Loutraki Thermal Spa, avec ses piscines d'eau thermale.",
+        "<strong>🏖️</strong>: Baignade et farniente sur la plage de Loutraki."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Loutraki Thermal Spa, Loutraki",
+          "categorie": "Spa thermal",
+          "coords": { "lat": 37.9890, "lng": 22.9770 }
+        },
+        {
+          "nom_recherche": "Plage de Loutraki, Loutraki",
+          "categorie": "Plage",
+          "coords": { "lat": 37.9880, "lng": 22.9750 }
+        }
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Transport",
+          "texte": "Des bus réguliers relient Athènes à Loutraki, rendant l'excursion facile et agréable."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛍️",
+      "titre": "Derniers achats et dîner d'adieu",
+      "legende": "Profitez de votre dernière journée à Athènes pour flâner dans les marchés, faire quelques achats de souvenirs et savourer un dernier dîner mémorable. Une occasion de se remémorer les moments forts de votre odyssée grecque.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🛍️</strong>: Shopping de souvenirs dans les rues commerçantes d'Ermou ou au marché aux puces de Monastiraki.",
+        "<strong>🚶‍♀️</strong>: Dernière balade dans le Jardin National d'Athènes, une oasis de verdure.",
+        "<strong>🍽️</strong>: Dîner d'adieu dans une taverne traditionnelle avec musique live."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Rue Ermou, Athènes",
+          "categorie": "Rue commerçante",
+          "coords": { "lat": 37.9760, "lng": 23.7270 }
+        },
+        {
+          "nom_recherche": "Jardin National d'Athènes, Athènes",
+          "categorie": "Parc",
+          "coords": { "lat": 37.9730, "lng": 23.7370 }
+        }
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées souvenirs",
+          "texte": "Huile d'olive, miel, épices, ou des répliques d'œuvres antiques sont d'excellents souvenirs."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🛫",
+      "titre": "Départ d'Athènes",
+      "legende": "C'est le moment de dire au revoir à la Grèce. Profitez d'un dernier petit-déjeuner grec avant de vous rendre à l'aéroport pour votre vol retour vers Lyon, la tête pleine de souvenirs inoubliables.",
+      "lieu": "Athènes",
+      "activites": [
+        "<strong>🍳</strong>: Petit-déjeuner à l'hôtel ou dans un café local.",
+        "<strong>🛫</strong>: Transfert à l'aéroport international d'Athènes (ATH) pour votre vol retour.",
+        "<strong>👋</strong>: Départ de Grèce."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport international d'Athènes, Athènes",
+          "categorie": "Aéroport",
+          "coords": { "lat": 37.9364, "lng": 23.9493 }
+        }
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "✈️",
+          "titre": "Check-in",
+          "texte": "Vérifiez les horaires de votre vol et prévoyez suffisamment de temps pour le transfert et l'enregistrement."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 96 €/pers", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 350 €/pers (ferries, métro, bus, location voiture/quad sur îles)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 1200 €/pers (3 repas/jour, tavernes et restaurants moyens)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 1300 €/pers (13 nuits en hôtel 3* ou équivalent)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 250 €/pers (entrées sites, musées, croisières, spa)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Mai", "symbole": "☀️" },
+    { "titre": "Juin", "symbole": "☀️" },
+    { "titre": "Septembre", "symbole": "☀️" },
+    { "titre": "Octobre", "symbole": "☀️" }
+  ],
+  "infos_pratiques": [
+    { "titre": "En mai, les températures en Grèce varient entre 18 et 25°C. Prévoir des vêtements légers, un chapeau et de la crème solaire. Les soirées peuvent être plus fraîches sur les îles.", "symbole": "☀️" },
+    { "titre": "La monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, mais il est utile d'avoir un peu de liquide pour les petits commerces ou les îles plus reculées.", "symbole": "💳" },
+    { "titre": "Le permis de conduire français est suffisant pour louer une voiture ou un scooter. La conduite est à droite. Attention aux routes sinueuses sur les îles.", "symbole": "🚗" },
+    { "titre": "Le grec est la langue officielle. L'anglais est couramment parlé dans les zones touristiques. Apprendre quelques mots de grec (kalimera, efharisto) est toujours apprécié.", "symbole": "🗣️" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "Les Grecs ont inventé la démocratie, mais aussi le yo-yo ! Ce jouet, qui remonte à l'Antiquité, était utilisé pour la chasse et non pour le divertissement."
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Insolite",
+      "texte": "À Santorin, les ânes sont encore utilisés comme \"taxis\" pour monter les falaises de Fira. Une tradition qui perdure, malgré les téléphériques modernes !"
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Moussaka",
+      "description": "Un gratin savoureux à base d'aubergines, de viande hachée (agneau ou bœuf), de pommes de terre et d'une onctueuse béchamel. Un classique réconfortant de la cuisine grecque."
+    },
+    {
+      "symbole": "🥗",
+      "titre": "Salade Grecque (Horiatiki)",
+      "description": "Une salade fraîche et colorée composée de tomates, concombres, oignons rouges, poivrons, olives de Kalamata, et bien sûr, une généreuse tranche de feta, le tout arrosé d'huile d'olive grecque."
+    },
+    {
+      "symbole": "🍦",
+      "titre": "Yaourt Grec au miel et noix",
+      "description": "Un dessert simple mais divin : un yaourt grec épais et crémeux, souvent accompagné de miel local et de noix concassées. Parfait pour une touche de douceur après un repas."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/LYS-ATH/2027-05-11/2027-05-25", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Visit Greece", "url": "https://www.visitgreece.gr/", "symbole": "📘" },
+    { "legende": "Horaires des ferries", "titre": "Ferryhopper", "url": "https://www.ferryhopper.com/fr/", "symbole": "🚢" },
+    { "legende": "Météo", "titre": "AccuWeather Grèce", "url": "https://www.accuweather.com/fr/gr/greece-weather", "symbole": "🌤️" }
+  ]
+}
