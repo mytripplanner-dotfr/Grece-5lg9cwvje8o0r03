@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssée Relaxante en Grèce : Îles et Sources Chaudes </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token="/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Athènes et première immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Découverte de l'Acropole et de l'Agora</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Trésors du musée et vue panoramique</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Voyage vers Santorin et coucher de soleil à Oia</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Exploration de Fira et vues sur la Caldeira</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Croisière volcanique et sources chaudes</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Voyage vers Milos et détente balnéaire</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Paysages lunaires et villages de pêcheurs</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Croisière à Kleftiko et baignade dans les grottes</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Plages thermales et sources chaudes</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Retour à Athènes et soirée tranquille</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Journée bien-être à Loutraki</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Derniers achats et dîner d'adieu</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Départ d'Athènes</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">GRECE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Odyssée Relaxante en Grèce : Îles et Sources Chaudes</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 14 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 3200 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 2h50 depuis Lyon, france</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Athènes et première immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après votre vol depuis Lyon, installez-vous confortablement à Athènes. Profitez d'une première balade douce dans le quartier historique de Plaka, imprégnez-vous de l'ambiance grecque et savourez un dîner traditionnel pour bien commencer votre séjour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬</strong>: Arrivée à l'aéroport international d'Athènes (ATH) et transfert vers votre hôtel.</li><li><strong>🛏️</strong>: Installation et détente à votre hébergement.</li><li><strong>🚶‍♂️</strong>: Balade relaxante dans le quartier pittoresque de Plaka, au pied de l'Acropole.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil transport</p>
+                                <p class="text-gray-700">Le métro est le moyen le plus simple et rapide pour rejoindre le centre-ville depuis l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte de l'Acropole et de l'Agora</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de l'histoire antique en explorant l'Acropole, symbole intemporel d'Athènes. Poursuivez avec une promenade paisible dans l'Agora antique, berceau de la démocratie, avant de vous détendre dans un café typique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️</strong>: Visite de l'Acropole d'Athènes, incluant le Parthénon et l'Érechthéion.</li><li><strong>🚶‍♀️</strong>: Promenade dans l'Agora antique, cœur de la vie publique athénienne.</li><li><strong>☕</strong>: Pause détente dans un café traditionnel à Monastiraki.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">L'Acropole est très exposée au soleil. N'oubliez pas chapeau, lunettes et crème solaire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trésors du musée et vue panoramique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les collections fascinantes du Musée National Archéologique, puis offrez-vous une vue imprenable sur Athènes depuis le Mont Lycabette. Une journée équilibrée entre culture et paysages apaisants.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏺</strong>: Visite du Musée National Archéologique, l'un des plus grands musées de Grèce.</li><li><strong>🚠</strong>: Montée en funiculaire au Mont Lycabette pour un panorama exceptionnel sur la ville.</li><li><strong>🌅</strong>: Dîner avec vue sur l'Acropole illuminée depuis un restaurant de Gazi ou Thissio.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Astuce</p>
+                                <p class="text-gray-700">Le funiculaire du Mont Lycabette est une option confortable pour profiter de la vue sans effort.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voyage vers Santorin et coucher de soleil à Oia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une traversée relaxante vers la mythique île de Santorin. Après votre installation, dirigez-vous vers Oia pour assister à l'un des couchers de soleil les plus célèbres du monde, un moment de pure magie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚢</strong>: Transfert au port du Pirée et traversée en ferry vers Santorin (environ 5-8h selon le type de ferry).</li><li><strong>🛏️</strong>: Installation à votre hôtel à Fira ou Oia.</li><li><strong>🌅</strong>: Admirer le coucher de soleil emblématique depuis Oia.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Temps de trajet</p>
+                                <p class="text-gray-700">Prévoyez une journée de transition pour le ferry. Les ferries rapides réduisent le temps de traversée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration de Fira et vues sur la Caldeira</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez Fira, la capitale animée de Santorin, avec ses ruelles sinueuses et ses vues spectaculaires sur la caldeira. Profitez d'une balade tranquille le long des falaises, ponctuée de pauses pour admirer le paysage volcanique unique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️</strong>: Balade dans les ruelles de Fira, la capitale de Santorin.</li><li><strong>📸</strong>: Admirer les vues imprenables sur la caldeira et la mer Égée.</li><li><strong>🍽️</strong>: Déguster un déjeuner avec vue dans un restaurant de Fira.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Chaussures confortables</p>
+                                <p class="text-gray-700">Les rues pavées de Fira et Oia nécessitent de bonnes chaussures pour marcher confortablement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Croisière volcanique et sources chaudes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une croisière relaxante autour de la caldeira. Vous aurez l'occasion de nager dans les sources chaudes volcaniques de Palea Kameni, une expérience unique et apaisante pour le corps et l'esprit.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛵</strong>: Croisière en bateau vers le volcan de Nea Kameni et l'île de Palea Kameni.</li><li><strong>♨️</strong>: Baignade dans les sources chaudes sulfureuses de Palea Kameni.</li><li><strong>🍷</strong>: Dégustation de vins locaux dans un vignoble de Santorin en fin de journée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Attention aux maillots</p>
+                                <p class="text-gray-700">Les sources chaudes peuvent tacher les maillots de bain clairs en raison du soufre.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voyage vers Milos et détente balnéaire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez Santorin pour l'île de Milos, réputée pour ses paysages lunaires et ses plages idylliques. Après l'installation, profitez d'une après-midi de pure détente sur l'une des plages calmes de l'île, loin de l'agitation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚢</strong>: Traversée en ferry de Santorin à Milos (environ 2-3h).</li><li><strong>🛏️</strong>: Installation à votre hôtel à Adamas ou Pollonia.</li><li><strong>⛱️</strong>: Après-midi de détente sur la plage de Sarakiniko ou Firopotamos.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Location de véhicule</p>
+                                <p class="text-gray-700">La location d'un quad ou d'une petite voiture est recommandée pour explorer Milos à votre rythme.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Paysages lunaires et villages de pêcheurs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les paysages surréalistes de Sarakiniko, puis découvrez les charmants villages de pêcheurs colorés comme Mandrakia et Klima. Une journée dédiée à la beauté naturelle et à l'authenticité de Milos.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♂️</strong>: Exploration des formations rocheuses uniques de Sarakiniko.</li><li><strong>🏘️</strong>: Visite des villages de pêcheurs pittoresques de Mandrakia et Klima.</li><li><strong>🍽️</strong>: Dégustation de fruits de mer frais dans une taverne locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Sarakiniko offre des opportunités de photos incroyables, surtout au lever ou au coucher du soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Croisière à Kleftiko et baignade dans les grottes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une croisière inoubliable vers Kleftiko, l'ancien repaire des pirates, accessible uniquement par la mer. Nagez dans des eaux cristallines et explorez des grottes marines, une expérience rafraîchissante et mémorable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛵</strong>: Croisière d'une journée autour de Milos, avec arrêt à Kleftiko.</li><li><strong>🏊‍♀️</strong>: Baignade et snorkeling dans les eaux turquoise de Kleftiko et Sykia.</li><li><strong>🍽️</strong>: Déjeuner à bord du bateau (souvent inclus dans les excursions).</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐠 Équipement</p>
+                                <p class="text-gray-700">N'oubliez pas votre masque et tuba pour profiter pleinement des fonds marins de Kleftiko.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plages thermales et sources chaudes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée de pure relaxation sur les plages de Milos, certaines offrant des sources thermales naturelles. Laissez-vous bercer par le soleil et les eaux chaudes, une parenthèse de bien-être avant de retourner sur le continent.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>♨️</strong>: Détente sur la plage de Paliochori, connue pour ses sources thermales sous-marines.</li><li><strong>⛱️</strong>: Baignade et farniente sur la plage de Fyriplaka ou Tsigrado.</li><li><strong>🍦</strong>: Dégustation de glaces artisanales à Plaka, la capitale de Milos.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Cuisine locale</p>
+                                <p class="text-gray-700">Les tavernes de Paliochori proposent des plats cuits dans le sable chaud grâce à l'activité volcanique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Athènes et soirée tranquille</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après ces jours idylliques sur les îles, reprenez le ferry pour Athènes. Profitez de la soirée pour vous reposer, dîner tranquillement dans un quartier que vous avez apprécié ou découvrir un nouveau coin de la capitale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚢</strong>: Traversée en ferry de Milos à Athènes (environ 3-5h).</li><li><strong>🛏️</strong>: Installation à votre hôtel à Athènes.</li><li><strong>🍽️</strong>: Dîner relaxant dans le quartier de Psiri, connu pour ses tavernes et son ambiance.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📚 Lecture</p>
+                                <p class="text-gray-700">Le trajet en ferry est idéal pour lire un bon livre ou simplement admirer le paysage marin.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée bien-être à Loutraki</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Évadez-vous pour une journée de pur bien-être à Loutraki, une ville thermale réputée. Profitez des eaux curatives de ses spas et de ses plages, une manière parfaite de se ressourcer avant la fin du voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗</strong>: Excursion d'une journée à Loutraki (environ 1h de route depuis Athènes).</li><li><strong>🧖‍♀️</strong>: Détente au Loutraki Thermal Spa, avec ses piscines d'eau thermale.</li><li><strong>🏖️</strong>: Baignade et farniente sur la plage de Loutraki.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚌 Transport</p>
+                                <p class="text-gray-700">Des bus réguliers relient Athènes à Loutraki, rendant l'excursion facile et agréable.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers achats et dîner d'adieu</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de votre dernière journée à Athènes pour flâner dans les marchés, faire quelques achats de souvenirs et savourer un dernier dîner mémorable. Une occasion de se remémorer les moments forts de votre odyssée grecque.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️</strong>: Shopping de souvenirs dans les rues commerçantes d'Ermou ou au marché aux puces de Monastiraki.</li><li><strong>🚶‍♀️</strong>: Dernière balade dans le Jardin National d'Athènes, une oasis de verdure.</li><li><strong>🍽️</strong>: Dîner d'adieu dans une taverne traditionnelle avec musique live.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées souvenirs</p>
+                                <p class="text-gray-700">Huile d'olive, miel, épices, ou des répliques d'œuvres antiques sont d'excellents souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ d'Athènes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à la Grèce. Profitez d'un dernier petit-déjeuner grec avant de vous rendre à l'aéroport pour votre vol retour vers Lyon, la tête pleine de souvenirs inoubliables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍳</strong>: Petit-déjeuner à l'hôtel ou dans un café local.</li><li><strong>🛫</strong>: Transfert à l'aéroport international d'Athènes (ATH) pour votre vol retour.</li><li><strong>👋</strong>: Départ de Grèce.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Grece-5lg9cwvje8o0r03/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Check-in</p>
+                                <p class="text-gray-700">Vérifiez les horaires de votre vol et prévoyez suffisamment de temps pour le transfert et l'enregistrement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛬 Budget vol: </strong>A partir de 96 €/pers</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚆 Budget transports: </strong>Environ 350 €/pers (ferries, métro, bus, location voiture/quad sur îles)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Budget repas: </strong>Environ 1200 €/pers (3 repas/jour, tavernes et restaurants moyens)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛏️ Budget logement: </strong>Environ 1300 €/pers (13 nuits en hôtel 3* ou équivalent)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🎭 Budget activités: </strong>Environ 250 €/pers (entrées sites, musées, croisières, spa)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Mai</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Juin</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Septembre</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Octobre</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ En mai, les températures en Grèce varient entre 18 et 25°C. Prévoir des vêtements légers, un chapeau et de la crème solaire. Les soirées peuvent être plus fraîches sur les îles.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, mais il est utile d'avoir un peu de liquide pour les petits commerces ou les îles plus reculées.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 Le permis de conduire français est suffisant pour louer une voiture ou un scooter. La conduite est à droite. Attention aux routes sinueuses sur les îles.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ Le grec est la langue officielle. L'anglais est couramment parlé dans les zones touristiques. Apprendre quelques mots de grec (kalimera, efharisto) est toujours apprécié.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Anecdotes
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>💡 Le saviez-vous ?:</strong> Les Grecs ont inventé la démocratie, mais aussi le yo-yo ! Ce jouet, qui remonte à l'Antiquité, était utilisé pour la chasse et non pour le divertissement.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🙃 Insolite:</strong> À Santorin, les ânes sont encore utilisés comme "taxis" pour monter les falaises de Fira. Une tradition qui perdure, malgré les téléphériques modernes !</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Spécialités culinaires
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍴 Moussaka:</strong> Un gratin savoureux à base d'aubergines, de viande hachée (agneau ou bœuf), de pommes de terre et d'une onctueuse béchamel. Un classique réconfortant de la cuisine grecque.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Salade Grecque (Horiatiki):</strong> Une salade fraîche et colorée composée de tomates, concombres, oignons rouges, poivrons, olives de Kalamata, et bien sûr, une généreuse tranche de feta, le tout arrosé d'huile d'olive grecque.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍦 Yaourt Grec au miel et noix:</strong> Un dessert simple mais divin : un yaourt grec épais et crémeux, souvent accompagné de miel local et de noix concassées. Parfait pour une touche de douceur après un repas.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Grece-5lg9cwvje8o0r03/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/LYS-ATH/2027-05-11/2027-05-25" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.visitgreece.gr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Greece</strong></a></li>
+                    
+                        <li><a href="https://www.ferryhopper.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚢 Ferryhopper</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/gr/greece-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ AccuWeather Grèce</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
